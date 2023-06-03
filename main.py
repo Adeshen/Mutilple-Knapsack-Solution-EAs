@@ -91,11 +91,18 @@ class Main(object):
 
 
 '''MAIN ENTRANCE HERE'''
-filenames = ut.getListofFiles('./TestDataset')
+
+
+
+
+datasource='./TestDataset_01'
+filenames = ut.getListofFiles(datasource)
+
+
 for f in filenames:
     try:
         print('Processing data set '+f)
-        m = Main(dataset='./TestDataset/'+f,num_iterations=10,algorithm=0)
+        m = Main(dataset=datasource+f,num_iterations=10,algorithm=0)
         m.Run()
         print('Done processing')
     except Exception as e:

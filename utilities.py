@@ -18,6 +18,21 @@ def readfile(filename):
         print('here')
     return arr
 
+def readfile_from_3(filename):
+    '''read file into array of shape (n,3)'''
+    arr = []
+    try:
+        f = open(filename).readlines()
+        for line in f:
+            split_string = line.split()
+            arr.append([int(split_string[0]),int(split_string[1]),int(split_string[2])])
+    except Exception as e:
+        print(e)
+        # print('here')
+    return arr
+
+
+
 def plotgraph(x,y,name,save_name):
     for i in range(len(x)):
         plt.plot(x[i],y[i])

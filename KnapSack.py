@@ -27,10 +27,13 @@ class Knapsack(object):
         '''Very simple fitness function'''
         sumWeights = self.sumWeights(indiviual)
         penalty = 1
+        
+        if sumWeights>self.maxWeight*2:
+            return -999999999
         if sumWeights>self.maxWeight:
-            penalty = sumWeights+math.fabs(self.maxWeight-sumWeights)
+            penalty =sumWeights+ math.fabs(self.maxWeight-sumWeights)**2
 
-        fitness = (self.sumValues(indiviual))-(penalty)
+        fitness = (self.sumValues(indiviual)**3)-(penalty)
         return fitness
 
     def getValues(self):

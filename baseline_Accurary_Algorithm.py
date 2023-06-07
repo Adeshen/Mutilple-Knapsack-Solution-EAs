@@ -1,6 +1,8 @@
 import utilities as ut
 
 import math
+import time
+
 
 def brutal_dynamic(v,w,s,n_items,max_weight):
     
@@ -24,17 +26,23 @@ def bit_optime_dynamic(v_in,w_in,s_in,n_items,max_weight):
     # 二进制优化 成为 01 背包
     for i in range(0,n_items):
         c = 1
-        p, h, k = w_in[i],v_in[i],s_in[i]
-        while k > c:
-            k -= c
-            w[index] = c * p
-            index += 1
-            v[index] = c * h
+        p= w_in[i]
+        h= v_in[i]
+        k= s_in[i]
+        while k >= c:
+            # k -= c
+            if(k&c):
+                w[index] = c * p
+                print(c*p," i",i," c",c)
+                index += 1
+                v[index] = c * h
+            
             c *= 2
-        w[index] = p * k
-        index += 1
-        v[index] = h * k
+        # w[index] = p * k
+        # index += 1
+        # v[index] = h * k
     # 01背包
+    # print("v:",v)
     for i in range(1, length + 1):
         for l in range(max_weight, w[i] - 1, -1):
             f[l] = max(f[l], f[l - w[i]] + v[i])
@@ -65,12 +73,15 @@ for filename in filenames:
     # ans=brutal_dynamic(v,w,s,N,C)
     # print(ans)
 
+    start_time = time.time()
     ans2=bit_optime_dynamic(v,w,s,N,C)
+    end_time = time.time()
+    run_time = end_time - start_time
+
     print(ans2)
+    print("算法运行时间：", run_time, "秒")
 
     
-
-
 
 
 

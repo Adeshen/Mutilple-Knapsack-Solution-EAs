@@ -1,1 +1,18 @@
 Algorithm,Dataset,Iteration,Number Of Items,Best Value,Optimal Value,Shortfall,Operations,Time (Milli)
+Genetic Algorithm,f.txt,10,4,4,10,6,114804,119
+Genetic Algorithm,f.txt,30,4,4,10,6,115014,115
+Genetic Algorithm,f.txt,30,4,4,10,6,115081,109
+Genetic Algorithm,f.txt,30,4,4,10,6,86235,113
+Genetic Algorithm,f.txt,30,4,4,10,6,86403,111
+Genetic Algorithm,f.txt,30,4,4,10,6,86017,110
+Genetic Algorithm,f.txt,30,4,4,10,6,143344,116
+Genetic Algorithm,f.txt,30,4,4,10,6,114464,112
+Genetic Algorithm,f.txt,30,4,4,10,6,100266,113
+Genetic Algorithm,f.txt,30,4,3,10,7,100582,109
+Genetic Algorithm,f.txt,30,4,3,10,7,100430,113
+Genetic Algorithm,f.txt,30,4,10,10,0,100680,112
+Genetic Algorithm,f.txt,30,4,3,10,7,100182,113
+Genetic Algorithm,f.txt,300,4,22,10,-12,100730,114
+Genetic Algorithm,f.txt,300,4,3,10,7,100176,120
+Genetic Algorithm,f.txt,300,4,22,10,-12,100208,118
+Genetic Algorithm,f.txt,300,4,8,10,2,100506,117
